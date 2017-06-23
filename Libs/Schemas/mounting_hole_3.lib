@@ -1,0 +1,18 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#
+# Mounting_hole_3
+#
+DEF Mounting_hole_3 Mount 0 0 N N 1 F N
+F0 "Mount" 0 -150 60 H V C CNN
+F1 "Mounting_hole_3" 0 200 60 H V C CNN
+F2 "" 0 0 60 H I C CNN
+F3 "" 0 0 60 H I C CNN
+DRAW
+C 0 0 150 0 1 0 N
+P 2 0 1 0 -50 0 50 0 N
+P 2 0 1 0 0 50 0 -50 N
+ENDDRAW
+ENDDEF
+#
+#End Library
