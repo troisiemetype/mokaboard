@@ -1,4 +1,4 @@
-update=Vendredi 23 juin 2017 16:49:10
+update=Samedi 24 juin 2017 17:35:30
 version=1
 last_client=kicad
 [pcbnew]
@@ -25,6 +25,16 @@ version=1
 NetIExt=net
 [general]
 version=1
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=Schéma/
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
+LabSize=60
 [eeschema]
 version=1
 LibDir=../Libraries/SMD_perso.pretty;../Libraries
@@ -62,13 +72,4 @@ LibName30=valves
 LibName31=Display_perso
 LibName32=switches
 LibName33=Holes_Fids
-[schematic_editor]
-version=1
-PageLayoutDescrFile=
-PlotDirectoryName=Schéma/
-SubpartIdSeparator=0
-SubpartFirstId=65
-NetFmtName=
-SpiceForceRefPrefix=0
-SpiceUseNetNumbers=0
-LabSize=60
+LibName34=Logos

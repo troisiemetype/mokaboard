@@ -32,6 +32,7 @@ LIBS:valves
 LIBS:Display_perso
 LIBS:switches
 LIBS:Holes_Fids
+LIBS:Logos
 LIBS:Tuile-cache
 EELAYER 25 0
 EELAYER END
@@ -1535,4 +1536,26 @@ Connection ~ 8100 1700
 Wire Wire Line
 	8050 3100 8100 3100
 Connection ~ 8100 3100
+$Comp
+L Logo logo1
+U 1 1 594E8880
+P 6550 6950
+F 0 "logo1" H 6550 7050 60  0000 C CNN
+F 1 "Moka" H 6550 6850 60  0000 C CNN
+F 2 "Logos:Moka_20mm" H 6550 6950 60  0001 C CNN
+F 3 "" H 6550 6950 60  0001 C CNN
+	1    6550 6950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Logo logo2
+U 1 1 594E93C5
+P 6550 7300
+F 0 "logo2" H 6550 7400 60  0000 C CNN
+F 1 "le labo" H 6550 7200 60  0000 C CNN
+F 2 "Logos:Logo_labo_20mm" H 6550 7300 60  0001 C CNN
+F 3 "" H 6550 7300 60  0001 C CNN
+	1    6550 7300
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
