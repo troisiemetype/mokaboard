@@ -1,4 +1,5 @@
 EESchema Schematic File Version 2
+LIBS:Moka-rescue
 LIBS:Tuile-rescue
 LIBS:power
 LIBS:device
@@ -33,7 +34,7 @@ LIBS:Display_perso
 LIBS:switches
 LIBS:Holes_Fids
 LIBS:Logos
-LIBS:Tuile-cache
+LIBS:Moka-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
@@ -59,28 +60,28 @@ F 3 "" H 2300 2450 50  0001 C CNN
 	1    2300 2450
 	1    0    0    -1  
 $EndComp
-Text GLabel 4900 1400 2    60   Input ~ 0
-SDA
 Text GLabel 4900 2200 2    60   Input ~ 0
+SDA
+Text GLabel 4900 3000 2    60   Input ~ 0
 SCL
-Text GLabel 3300 3250 2    60   Input ~ 0
+Text GLabel 3300 1450 2    60   Input ~ 0
 DIN
-Text GLabel 3300 3350 2    60   Input ~ 0
-BOUT1
-Text GLabel 3300 3450 2    60   Input ~ 0
-BOUT2
-Text GLabel 3300 3550 2    60   Input ~ 0
-BOUT3
-Text GLabel 3300 3650 2    60   Input ~ 0
-BOUT4
+Text GLabel 3300 2950 2    60   Input ~ 0
+BCH1
+Text GLabel 3300 3050 2    60   Input ~ 0
+BCH2
+Text GLabel 3300 3150 2    60   Input ~ 0
+BCH3
+Text GLabel 3300 3250 2    60   Input ~ 0
+BCH4
 Text GLabel 3300 2200 2    60   Input ~ 0
-BIN1
+BREAD1
 Text GLabel 3300 2300 2    60   Input ~ 0
-BIN2
+BREAD2
 Text GLabel 3300 2400 2    60   Input ~ 0
-BIN3
+BREAD3
 Text GLabel 3300 2500 2    60   Input ~ 0
-BIN4
+BREAD4
 $Comp
 L +5V #PWR01
 U 1 1 59481233
@@ -117,32 +118,32 @@ $EndComp
 $Comp
 L R R3
 U 1 1 59481300
-P 4800 2850
-F 0 "R3" V 4880 2850 50  0000 C CNN
-F 1 "10K" V 4800 2850 50  0000 C CNN
-F 2 "Resistors_SMD:R_0603" V 4730 2850 50  0001 C CNN
-F 3 "" H 4800 2850 50  0001 C CNN
-	1    4800 2850
+P 4800 3650
+F 0 "R3" V 4880 3650 50  0000 C CNN
+F 1 "10K" V 4800 3650 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 4730 3650 50  0001 C CNN
+F 3 "" H 4800 3650 50  0001 C CNN
+	1    4800 3650
 	1    0    0    -1  
 $EndComp
 $Comp
 L +5V #PWR03
 U 1 1 59481419
-P 4800 2600
-F 0 "#PWR03" H 4800 2450 50  0001 C CNN
-F 1 "+5V" H 4800 2740 50  0000 C CNN
-F 2 "" H 4800 2600 50  0001 C CNN
-F 3 "" H 4800 2600 50  0001 C CNN
-	1    4800 2600
+P 4800 3400
+F 0 "#PWR03" H 4800 3250 50  0001 C CNN
+F 1 "+5V" H 4800 3540 50  0000 C CNN
+F 2 "" H 4800 3400 50  0001 C CNN
+F 3 "" H 4800 3400 50  0001 C CNN
+	1    4800 3400
 	1    0    0    -1  
 $EndComp
 $Comp
-L CONN_01X05 J7
+L Conn_01x05 J7
 U 1 1 59481785
 P 1850 4650
 F 0 "J7" H 1850 4950 50  0000 C CNN
 F 1 "CONN_01X05" V 1950 4650 50  0000 C CNN
-F 2 "Conn_perso:Connecteur_1x5_SMD" H 1850 4650 50  0001 C CNN
+F 2 "Connectors_perso:Connecteur_1x5_SMD" H 1850 4650 50  0001 C CNN
 F 3 "" H 1850 4650 50  0001 C CNN
 	1    1850 4650
 	1    0    0    -1  
@@ -169,7 +170,7 @@ F 3 "" H 1050 4350 50  0001 C CNN
 	1    1050 4350
 	1    0    0    -1  
 $EndComp
-Text GLabel 3300 3150 2    60   Input ~ 0
+Text GLabel 4900 1400 2    60   Input ~ 0
 INT
 Text GLabel 1550 4450 0    60   Input ~ 0
 INT
@@ -179,17 +180,6 @@ Text GLabel 1550 4750 0    60   Input ~ 0
 SCL
 NoConn ~ 1400 2700
 NoConn ~ 1400 2800
-$Comp
-L CONN_02X03 J1
-U 1 1 59481C55
-P 3200 4600
-F 0 "J1" H 3200 4800 50  0000 C CNN
-F 1 "CONN_02X03" H 3200 4400 50  0000 C CNN
-F 2 "Conn_perso:Pin_Header_Straight_2x03_Pitch2.54mm_SMD" H 3200 3400 50  0001 C CNN
-F 3 "" H 3200 3400 50  0001 C CNN
-	1    3200 4600
-	1    0    0    -1  
-$EndComp
 Text GLabel 2850 4500 0    60   Input ~ 0
 MISO
 Text GLabel 2850 4700 0    60   Input ~ 0
@@ -308,7 +298,7 @@ U 1 1 59485ADC
 P 3400 5900
 F 0 "SW1" H 3450 6000 50  0000 L CNN
 F 1 "SW_Push" H 3400 5840 50  0000 C CNN
-F 2 "Switches_perso:Pad_30" H 3400 6100 50  0001 C CNN
+F 2 "switches_perso:Pad_30" H 3400 6100 50  0001 C CNN
 F 3 "" H 3400 6100 50  0001 C CNN
 	1    3400 5900
 	1    0    0    -1  
@@ -319,7 +309,7 @@ U 1 1 59485C25
 P 4100 5900
 F 0 "SW2" H 4150 6000 50  0000 L CNN
 F 1 "SW_Push" H 4100 5840 50  0000 C CNN
-F 2 "Switches_perso:Pad_30" H 4100 6100 50  0001 C CNN
+F 2 "switches_perso:Pad_30" H 4100 6100 50  0001 C CNN
 F 3 "" H 4100 6100 50  0001 C CNN
 	1    4100 5900
 	1    0    0    -1  
@@ -330,7 +320,7 @@ U 1 1 59485CDF
 P 4800 5900
 F 0 "SW3" H 4850 6000 50  0000 L CNN
 F 1 "SW_Push" H 4800 5840 50  0000 C CNN
-F 2 "Switches_perso:Pad_30" H 4800 6100 50  0001 C CNN
+F 2 "switches_perso:Pad_30" H 4800 6100 50  0001 C CNN
 F 3 "" H 4800 6100 50  0001 C CNN
 	1    4800 5900
 	1    0    0    -1  
@@ -341,7 +331,7 @@ U 1 1 59485CE5
 P 5500 5900
 F 0 "SW4" H 5550 6000 50  0000 L CNN
 F 1 "SW_Push" H 5500 5840 50  0000 C CNN
-F 2 "Switches_perso:Pad_30" H 5500 6100 50  0001 C CNN
+F 2 "switches_perso:Pad_30" H 5500 6100 50  0001 C CNN
 F 3 "" H 5500 6100 50  0001 C CNN
 	1    5500 5900
 	1    0    0    -1  
@@ -352,7 +342,7 @@ U 1 1 59485D7B
 P 3400 6300
 F 0 "SW5" H 3450 6400 50  0000 L CNN
 F 1 "SW_Push" H 3400 6240 50  0000 C CNN
-F 2 "Switches_perso:Pad_30" H 3400 6500 50  0001 C CNN
+F 2 "switches_perso:Pad_30" H 3400 6500 50  0001 C CNN
 F 3 "" H 3400 6500 50  0001 C CNN
 	1    3400 6300
 	1    0    0    -1  
@@ -363,7 +353,7 @@ U 1 1 59485D81
 P 4100 6300
 F 0 "SW6" H 4150 6400 50  0000 L CNN
 F 1 "SW_Push" H 4100 6240 50  0000 C CNN
-F 2 "Switches_perso:Pad_30" H 4100 6500 50  0001 C CNN
+F 2 "switches_perso:Pad_30" H 4100 6500 50  0001 C CNN
 F 3 "" H 4100 6500 50  0001 C CNN
 	1    4100 6300
 	1    0    0    -1  
@@ -374,7 +364,7 @@ U 1 1 59485D87
 P 4800 6300
 F 0 "SW7" H 4850 6400 50  0000 L CNN
 F 1 "SW_Push" H 4800 6240 50  0000 C CNN
-F 2 "Switches_perso:Pad_30" H 4800 6500 50  0001 C CNN
+F 2 "switches_perso:Pad_30" H 4800 6500 50  0001 C CNN
 F 3 "" H 4800 6500 50  0001 C CNN
 	1    4800 6300
 	1    0    0    -1  
@@ -385,7 +375,7 @@ U 1 1 59485D8D
 P 5500 6300
 F 0 "SW8" H 5550 6400 50  0000 L CNN
 F 1 "SW_Push" H 5500 6240 50  0000 C CNN
-F 2 "Switches_perso:Pad_30" H 5500 6500 50  0001 C CNN
+F 2 "switches_perso:Pad_30" H 5500 6500 50  0001 C CNN
 F 3 "" H 5500 6500 50  0001 C CNN
 	1    5500 6300
 	1    0    0    -1  
@@ -396,7 +386,7 @@ U 1 1 59485FBF
 P 3400 6700
 F 0 "SW9" H 3450 6800 50  0000 L CNN
 F 1 "SW_Push" H 3400 6640 50  0000 C CNN
-F 2 "Switches_perso:Pad_30" H 3400 6900 50  0001 C CNN
+F 2 "switches_perso:Pad_30" H 3400 6900 50  0001 C CNN
 F 3 "" H 3400 6900 50  0001 C CNN
 	1    3400 6700
 	1    0    0    -1  
@@ -407,7 +397,7 @@ U 1 1 59485FC5
 P 4100 6700
 F 0 "SW10" H 4150 6800 50  0000 L CNN
 F 1 "SW_Push" H 4100 6640 50  0000 C CNN
-F 2 "Switches_perso:Pad_30" H 4100 6900 50  0001 C CNN
+F 2 "switches_perso:Pad_30" H 4100 6900 50  0001 C CNN
 F 3 "" H 4100 6900 50  0001 C CNN
 	1    4100 6700
 	1    0    0    -1  
@@ -418,7 +408,7 @@ U 1 1 59485FCB
 P 4800 6700
 F 0 "SW11" H 4850 6800 50  0000 L CNN
 F 1 "SW_Push" H 4800 6640 50  0000 C CNN
-F 2 "Switches_perso:Pad_30" H 4800 6900 50  0001 C CNN
+F 2 "switches_perso:Pad_30" H 4800 6900 50  0001 C CNN
 F 3 "" H 4800 6900 50  0001 C CNN
 	1    4800 6700
 	1    0    0    -1  
@@ -429,7 +419,7 @@ U 1 1 59485FD1
 P 5500 6700
 F 0 "SW12" H 5550 6800 50  0000 L CNN
 F 1 "SW_Push" H 5500 6640 50  0000 C CNN
-F 2 "Switches_perso:Pad_30" H 5500 6900 50  0001 C CNN
+F 2 "switches_perso:Pad_30" H 5500 6900 50  0001 C CNN
 F 3 "" H 5500 6900 50  0001 C CNN
 	1    5500 6700
 	1    0    0    -1  
@@ -440,7 +430,7 @@ U 1 1 59485FD7
 P 3400 7100
 F 0 "SW13" H 3450 7200 50  0000 L CNN
 F 1 "SW_Push" H 3400 7040 50  0000 C CNN
-F 2 "Switches_perso:Pad_30" H 3400 7300 50  0001 C CNN
+F 2 "switches_perso:Pad_30" H 3400 7300 50  0001 C CNN
 F 3 "" H 3400 7300 50  0001 C CNN
 	1    3400 7100
 	1    0    0    -1  
@@ -451,7 +441,7 @@ U 1 1 59485FDD
 P 4100 7100
 F 0 "SW14" H 4150 7200 50  0000 L CNN
 F 1 "SW_Push" H 4100 7040 50  0000 C CNN
-F 2 "Switches_perso:Pad_30" H 4100 7300 50  0001 C CNN
+F 2 "switches_perso:Pad_30" H 4100 7300 50  0001 C CNN
 F 3 "" H 4100 7300 50  0001 C CNN
 	1    4100 7100
 	1    0    0    -1  
@@ -462,7 +452,7 @@ U 1 1 59485FE3
 P 4800 7100
 F 0 "SW15" H 4850 7200 50  0000 L CNN
 F 1 "SW_Push" H 4800 7040 50  0000 C CNN
-F 2 "Switches_perso:Pad_30" H 4800 7300 50  0001 C CNN
+F 2 "switches_perso:Pad_30" H 4800 7300 50  0001 C CNN
 F 3 "" H 4800 7300 50  0001 C CNN
 	1    4800 7100
 	1    0    0    -1  
@@ -473,7 +463,7 @@ U 1 1 59485FE9
 P 5500 7100
 F 0 "SW16" H 5550 7200 50  0000 L CNN
 F 1 "SW_Push" H 5500 7040 50  0000 C CNN
-F 2 "Switches_perso:Pad_30" H 5500 7300 50  0001 C CNN
+F 2 "switches_perso:Pad_30" H 5500 7300 50  0001 C CNN
 F 3 "" H 5500 7300 50  0001 C CNN
 	1    5500 7100
 	1    0    0    -1  
@@ -496,7 +486,7 @@ Wire Wire Line
 Connection ~ 1050 1450
 Connection ~ 1050 3550
 Wire Wire Line
-	4800 2600 4800 2700
+	4800 3400 4800 3500
 Wire Wire Line
 	1550 4450 1650 4450
 Wire Wire Line
@@ -595,21 +585,21 @@ Wire Wire Line
 	5000 7100 5000 7250
 Connection ~ 5000 7250
 Text GLabel 3000 6050 0    60   Input ~ 0
-BIN1
+BCH1
 Text GLabel 3000 6450 0    60   Input ~ 0
-BIN2
+BCH2
 Text GLabel 3000 6850 0    60   Input ~ 0
-BIN3
+BCH3
 Text GLabel 3000 7250 0    60   Input ~ 0
-BIN4
+BCH4
 Text GLabel 3200 5600 1    60   Input ~ 0
-BOUT1
+BREAD1
 Text GLabel 3900 5600 1    60   Input ~ 0
-BOUT2
+BREAD2
 Text GLabel 4600 5600 1    60   Input ~ 0
-BOUT3
+BREAD3
 Text GLabel 5300 5600 1    60   Input ~ 0
-BOUT4
+BREAD4
 $Comp
 L C C2
 U 1 1 59489E3E
@@ -640,12 +630,12 @@ Wire Wire Line
 Connection ~ 1050 4450
 Connection ~ 1050 4750
 $Comp
-L CONN_01X05 J8
+L Conn_01x05 J8
 U 1 1 5948AD9F
 P 1850 5550
 F 0 "J8" H 1850 5850 50  0000 C CNN
 F 1 "CONN_01X05" V 1950 5550 50  0000 C CNN
-F 2 "Conn_perso:Connecteur_1x5_SMD" H 1850 5550 50  0001 C CNN
+F 2 "Connectors_perso:Connecteur_1x5_SMD" H 1850 5550 50  0001 C CNN
 F 3 "" H 1850 5550 50  0001 C CNN
 	1    1850 5550
 	1    0    0    -1  
@@ -714,12 +704,12 @@ Wire Wire Line
 Connection ~ 1050 5350
 Connection ~ 1050 5650
 $Comp
-L CONN_01X05 J9
+L Conn_01x05 J9
 U 1 1 5948B031
 P 1850 6450
 F 0 "J9" H 1850 6750 50  0000 C CNN
 F 1 "CONN_01X05" V 1950 6450 50  0000 C CNN
-F 2 "Conn_perso:Connecteur_1x5_SMD" H 1850 6450 50  0001 C CNN
+F 2 "Connectors_perso:Connecteur_1x5_SMD" H 1850 6450 50  0001 C CNN
 F 3 "" H 1850 6450 50  0001 C CNN
 	1    1850 6450
 	1    0    0    -1  
@@ -788,12 +778,12 @@ Wire Wire Line
 Connection ~ 1050 6250
 Connection ~ 1050 6550
 $Comp
-L CONN_01X05 J10
+L Conn_01x05 J10
 U 1 1 5948B059
 P 1850 7350
 F 0 "J10" H 1850 7650 50  0000 C CNN
 F 1 "CONN_01X05" V 1950 7350 50  0000 C CNN
-F 2 "Conn_perso:Connecteur_1x5_SMD" H 1850 7350 50  0001 C CNN
+F 2 "Connectors_perso:Connecteur_1x5_SMD" H 1850 7350 50  0001 C CNN
 F 3 "" H 1850 7350 50  0001 C CNN
 	1    1850 7350
 	1    0    0    -1  
@@ -864,8 +854,30 @@ Connection ~ 1050 7450
 $Comp
 L R R2
 U 1 1 5948BF5F
+P 4800 2850
+F 0 "R2" V 4880 2850 50  0000 C CNN
+F 1 "10K" V 4800 2850 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 4730 2850 50  0001 C CNN
+F 3 "" H 4800 2850 50  0001 C CNN
+	1    4800 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L +5V #PWR015
+U 1 1 5948C360
+P 4800 2600
+F 0 "#PWR015" H 4800 2450 50  0001 C CNN
+F 1 "+5V" H 4800 2740 50  0000 C CNN
+F 2 "" H 4800 2600 50  0001 C CNN
+F 3 "" H 4800 2600 50  0001 C CNN
+	1    4800 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R1
+U 1 1 5948C604
 P 4800 2050
-F 0 "R2" V 4880 2050 50  0000 C CNN
+F 0 "R1" V 4880 2050 50  0000 C CNN
 F 1 "10K" V 4800 2050 50  0000 C CNN
 F 2 "Resistors_SMD:R_0603" V 4730 2050 50  0001 C CNN
 F 3 "" H 4800 2050 50  0001 C CNN
@@ -873,61 +885,39 @@ F 3 "" H 4800 2050 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L +5V #PWR015
-U 1 1 5948C360
+L +5V #PWR016
+U 1 1 5948C60A
 P 4800 1800
-F 0 "#PWR015" H 4800 1650 50  0001 C CNN
+F 0 "#PWR016" H 4800 1650 50  0001 C CNN
 F 1 "+5V" H 4800 1940 50  0000 C CNN
 F 2 "" H 4800 1800 50  0001 C CNN
 F 3 "" H 4800 1800 50  0001 C CNN
 	1    4800 1800
 	1    0    0    -1  
 $EndComp
-$Comp
-L R R1
-U 1 1 5948C604
-P 4800 1250
-F 0 "R1" V 4880 1250 50  0000 C CNN
-F 1 "10K" V 4800 1250 50  0000 C CNN
-F 2 "Resistors_SMD:R_0603" V 4730 1250 50  0001 C CNN
-F 3 "" H 4800 1250 50  0001 C CNN
-	1    4800 1250
-	1    0    0    -1  
-$EndComp
-$Comp
-L +5V #PWR016
-U 1 1 5948C60A
-P 4800 1000
-F 0 "#PWR016" H 4800 850 50  0001 C CNN
-F 1 "+5V" H 4800 1140 50  0000 C CNN
-F 2 "" H 4800 1000 50  0001 C CNN
-F 3 "" H 4800 1000 50  0001 C CNN
-	1    4800 1000
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4800 1000 4800 1100
-Wire Wire Line
-	4300 1400 4900 1400
-Wire Wire Line
-	4300 1400 4300 2600
-Wire Wire Line
-	4300 2600 3300 2600
-Connection ~ 4800 1400
 Wire Wire Line
 	4800 1800 4800 1900
 Wire Wire Line
-	4400 2200 4900 2200
-Connection ~ 4800 2200
-Connection ~ 4800 3000
+	4300 2200 4900 2200
 Wire Wire Line
-	4400 2200 4400 2700
+	4300 2200 4300 2600
+Wire Wire Line
+	4300 2600 3300 2600
+Connection ~ 4800 2200
+Wire Wire Line
+	4800 2600 4800 2700
+Wire Wire Line
+	4400 3000 4900 3000
+Connection ~ 4800 3000
+Connection ~ 4800 3800
+Wire Wire Line
+	4400 3000 4400 2700
 Wire Wire Line
 	4400 2700 3300 2700
 Wire Wire Line
-	4300 3000 4900 3000
+	4300 3800 4900 3800
 Wire Wire Line
-	4300 3000 4300 2800
+	4300 3800 4300 2800
 Wire Wire Line
 	4300 2800 3300 2800
 Wire Wire Line
@@ -940,19 +930,19 @@ Wire Wire Line
 	5150 4300 5150 4400
 Wire Wire Line
 	5450 4300 5450 4400
-Text GLabel 3300 1350 2    60   Input ~ 0
+Text GLabel 3300 3350 2    60   Input ~ 0
 ADDR0
-Text GLabel 3300 1450 2    60   Input ~ 0
+Text GLabel 3300 3450 2    60   Input ~ 0
 ADDR1
-Text GLabel 3300 1550 2    60   Input ~ 0
+Text GLabel 3300 3550 2    60   Input ~ 0
 ADDR2
-Text GLabel 3300 2950 2    60   Input ~ 0
+Text GLabel 3300 3650 2    60   Input ~ 0
 ADDR3
-Text GLabel 3300 3050 2    60   Input ~ 0
+Text GLabel 3300 1350 2    60   Input ~ 0
 ADDR4
 NoConn ~ 3300 1950
 NoConn ~ 3300 2050
-Text GLabel 4900 3000 2    60   Input ~ 0
+Text GLabel 4900 3800 2    60   Input ~ 0
 RESET
 $Comp
 L Fiducial FID1
@@ -1120,429 +1110,12 @@ F 3 "" H 9100 6250 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Led_3535_addr D1
-U 1 1 594CED9D
-P 6800 1600
-F 0 "D1" H 6800 1400 60  0000 C CNN
-F 1 "Led_3535_addr" H 6800 1800 60  0000 C CNN
-F 2 "Display_perso:SK6812-mini" H 6850 1400 60  0001 C CNN
-F 3 "" H 6850 1400 60  0001 C CNN
-	1    6800 1600
-	1    0    0    -1  
-$EndComp
-$Comp
-L Led_3535_addr D2
-U 1 1 594CEE69
-P 7700 1600
-F 0 "D2" H 7700 1400 60  0000 C CNN
-F 1 "Led_3535_addr" H 7700 1800 60  0000 C CNN
-F 2 "Display_perso:SK6812-mini" H 7750 1400 60  0001 C CNN
-F 3 "" H 7750 1400 60  0001 C CNN
-	1    7700 1600
-	1    0    0    -1  
-$EndComp
-$Comp
-L Led_3535_addr D3
-U 1 1 594CF121
-P 8600 1600
-F 0 "D3" H 8600 1400 60  0000 C CNN
-F 1 "Led_3535_addr" H 8600 1800 60  0000 C CNN
-F 2 "Display_perso:SK6812-mini" H 8650 1400 60  0001 C CNN
-F 3 "" H 8650 1400 60  0001 C CNN
-	1    8600 1600
-	1    0    0    -1  
-$EndComp
-$Comp
-L Led_3535_addr D4
-U 1 1 594CF127
-P 9500 1600
-F 0 "D4" H 9500 1400 60  0000 C CNN
-F 1 "Led_3535_addr" H 9500 1800 60  0000 C CNN
-F 2 "Display_perso:SK6812-mini" H 9550 1400 60  0001 C CNN
-F 3 "" H 9550 1400 60  0001 C CNN
-	1    9500 1600
-	1    0    0    -1  
-$EndComp
-$Comp
-L Led_3535_addr D5
-U 1 1 594CF287
-P 6800 2300
-F 0 "D5" H 6800 2100 60  0000 C CNN
-F 1 "Led_3535_addr" H 6800 2500 60  0000 C CNN
-F 2 "Display_perso:SK6812-mini" H 6850 2100 60  0001 C CNN
-F 3 "" H 6850 2100 60  0001 C CNN
-	1    6800 2300
-	1    0    0    -1  
-$EndComp
-$Comp
-L Led_3535_addr D6
-U 1 1 594CF28D
-P 7700 2300
-F 0 "D6" H 7700 2100 60  0000 C CNN
-F 1 "Led_3535_addr" H 7700 2500 60  0000 C CNN
-F 2 "Display_perso:SK6812-mini" H 7750 2100 60  0001 C CNN
-F 3 "" H 7750 2100 60  0001 C CNN
-	1    7700 2300
-	1    0    0    -1  
-$EndComp
-$Comp
-L Led_3535_addr D7
-U 1 1 594CF293
-P 8600 2300
-F 0 "D7" H 8600 2100 60  0000 C CNN
-F 1 "Led_3535_addr" H 8600 2500 60  0000 C CNN
-F 2 "Display_perso:SK6812-mini" H 8650 2100 60  0001 C CNN
-F 3 "" H 8650 2100 60  0001 C CNN
-	1    8600 2300
-	1    0    0    -1  
-$EndComp
-$Comp
-L Led_3535_addr D8
-U 1 1 594CF299
-P 9500 2300
-F 0 "D8" H 9500 2100 60  0000 C CNN
-F 1 "Led_3535_addr" H 9500 2500 60  0000 C CNN
-F 2 "Display_perso:SK6812-mini" H 9550 2100 60  0001 C CNN
-F 3 "" H 9550 2100 60  0001 C CNN
-	1    9500 2300
-	1    0    0    -1  
-$EndComp
-$Comp
-L Led_3535_addr D9
-U 1 1 594CF717
-P 6800 3000
-F 0 "D9" H 6800 2800 60  0000 C CNN
-F 1 "Led_3535_addr" H 6800 3200 60  0000 C CNN
-F 2 "Display_perso:SK6812-mini" H 6850 2800 60  0001 C CNN
-F 3 "" H 6850 2800 60  0001 C CNN
-	1    6800 3000
-	1    0    0    -1  
-$EndComp
-$Comp
-L Led_3535_addr D10
-U 1 1 594CF71D
-P 7700 3000
-F 0 "D10" H 7700 2800 60  0000 C CNN
-F 1 "Led_3535_addr" H 7700 3200 60  0000 C CNN
-F 2 "Display_perso:SK6812-mini" H 7750 2800 60  0001 C CNN
-F 3 "" H 7750 2800 60  0001 C CNN
-	1    7700 3000
-	1    0    0    -1  
-$EndComp
-$Comp
-L Led_3535_addr D11
-U 1 1 594CF723
-P 8600 3000
-F 0 "D11" H 8600 2800 60  0000 C CNN
-F 1 "Led_3535_addr" H 8600 3200 60  0000 C CNN
-F 2 "Display_perso:SK6812-mini" H 8650 2800 60  0001 C CNN
-F 3 "" H 8650 2800 60  0001 C CNN
-	1    8600 3000
-	1    0    0    -1  
-$EndComp
-$Comp
-L Led_3535_addr D12
-U 1 1 594CF729
-P 9500 3000
-F 0 "D12" H 9500 2800 60  0000 C CNN
-F 1 "Led_3535_addr" H 9500 3200 60  0000 C CNN
-F 2 "Display_perso:SK6812-mini" H 9550 2800 60  0001 C CNN
-F 3 "" H 9550 2800 60  0001 C CNN
-	1    9500 3000
-	1    0    0    -1  
-$EndComp
-$Comp
-L Led_3535_addr D13
-U 1 1 594CF72F
-P 6800 3700
-F 0 "D13" H 6800 3500 60  0000 C CNN
-F 1 "Led_3535_addr" H 6800 3900 60  0000 C CNN
-F 2 "Display_perso:SK6812-mini" H 6850 3500 60  0001 C CNN
-F 3 "" H 6850 3500 60  0001 C CNN
-	1    6800 3700
-	1    0    0    -1  
-$EndComp
-$Comp
-L Led_3535_addr D14
-U 1 1 594CF735
-P 7700 3700
-F 0 "D14" H 7700 3500 60  0000 C CNN
-F 1 "Led_3535_addr" H 7700 3900 60  0000 C CNN
-F 2 "Display_perso:SK6812-mini" H 7750 3500 60  0001 C CNN
-F 3 "" H 7750 3500 60  0001 C CNN
-	1    7700 3700
-	1    0    0    -1  
-$EndComp
-$Comp
-L Led_3535_addr D15
-U 1 1 594CF73B
-P 8600 3700
-F 0 "D15" H 8600 3500 60  0000 C CNN
-F 1 "Led_3535_addr" H 8600 3900 60  0000 C CNN
-F 2 "Display_perso:SK6812-mini" H 8650 3500 60  0001 C CNN
-F 3 "" H 8650 3500 60  0001 C CNN
-	1    8600 3700
-	1    0    0    -1  
-$EndComp
-$Comp
-L Led_3535_addr D16
-U 1 1 594CF741
-P 9500 3700
-F 0 "D16" H 9500 3500 60  0000 C CNN
-F 1 "Led_3535_addr" H 9500 3900 60  0000 C CNN
-F 2 "Display_perso:SK6812-mini" H 9550 3500 60  0001 C CNN
-F 3 "" H 9550 3500 60  0001 C CNN
-	1    9500 3700
-	1    0    0    -1  
-$EndComp
-Text GLabel 6250 1700 0    60   Input ~ 0
-DIN
-Wire Wire Line
-	6250 1700 6450 1700
-Wire Wire Line
-	7150 1500 7250 1500
-Wire Wire Line
-	7250 1500 7250 1700
-Wire Wire Line
-	7250 1700 7350 1700
-Wire Wire Line
-	8050 1500 8150 1500
-Wire Wire Line
-	8150 1500 8150 1700
-Wire Wire Line
-	8150 1700 8250 1700
-Wire Wire Line
-	8950 1500 9050 1500
-Wire Wire Line
-	9050 1500 9050 1700
-Wire Wire Line
-	9050 1700 9150 1700
-Wire Wire Line
-	7150 2200 7250 2200
-Wire Wire Line
-	7250 2200 7250 2400
-Wire Wire Line
-	7250 2400 7350 2400
-Wire Wire Line
-	8050 2200 8150 2200
-Wire Wire Line
-	8150 2200 8150 2400
-Wire Wire Line
-	8150 2400 8250 2400
-Wire Wire Line
-	8950 2200 9050 2200
-Wire Wire Line
-	9050 2200 9050 2400
-Wire Wire Line
-	9050 2400 9150 2400
-Wire Wire Line
-	7150 2900 7250 2900
-Wire Wire Line
-	7250 2900 7250 3100
-Wire Wire Line
-	7250 3100 7350 3100
-Wire Wire Line
-	8050 2900 8150 2900
-Wire Wire Line
-	8150 2900 8150 3100
-Wire Wire Line
-	8150 3100 8250 3100
-Wire Wire Line
-	7150 3600 7250 3600
-Wire Wire Line
-	7250 3600 7250 3800
-Wire Wire Line
-	7250 3800 7350 3800
-Wire Wire Line
-	8050 3600 8150 3600
-Wire Wire Line
-	8150 3600 8150 3800
-Wire Wire Line
-	8150 3800 8250 3800
-Wire Wire Line
-	8950 2900 9050 2900
-Wire Wire Line
-	9050 2900 9050 3100
-Wire Wire Line
-	9050 3100 9150 3100
-Wire Wire Line
-	8950 3600 9050 3600
-Wire Wire Line
-	9050 3600 9050 3800
-Wire Wire Line
-	9050 3800 9150 3800
-NoConn ~ 9850 3600
-Wire Wire Line
-	7150 3800 7200 3800
-Wire Wire Line
-	7200 3800 7200 1250
-Wire Wire Line
-	7200 1250 9900 1250
-Wire Wire Line
-	9900 1250 9900 3800
-Wire Wire Line
-	9900 3800 9850 3800
-Wire Wire Line
-	6450 1500 6400 1500
-Wire Wire Line
-	6400 1500 6400 4100
-Wire Wire Line
-	6400 4100 9100 4100
-Wire Wire Line
-	9100 4100 9100 1500
-Wire Wire Line
-	9100 1500 9150 1500
-Wire Wire Line
-	7150 1700 7200 1700
-Connection ~ 7200 1700
-Wire Wire Line
-	7150 2400 7200 2400
-Connection ~ 7200 2400
-Wire Wire Line
-	7150 3100 7200 3100
-Connection ~ 7200 3100
-Wire Wire Line
-	8050 3800 8100 3800
-Wire Wire Line
-	8100 3800 8100 1250
-Connection ~ 8100 1250
-Wire Wire Line
-	8950 3800 9000 3800
-Wire Wire Line
-	9000 3800 9000 1250
-Connection ~ 9000 1250
-Wire Wire Line
-	7350 1500 7300 1500
-Wire Wire Line
-	7300 1500 7300 4100
-Connection ~ 7300 4100
-Wire Wire Line
-	8250 1500 8200 1500
-Wire Wire Line
-	8200 1500 8200 4100
-Connection ~ 8200 4100
-Wire Wire Line
-	6450 2200 6400 2200
-Connection ~ 6400 2200
-Wire Wire Line
-	6450 2900 6400 2900
-Connection ~ 6400 2900
-Wire Wire Line
-	6450 3600 6400 3600
-Connection ~ 6400 3600
-Wire Wire Line
-	7350 2200 7300 2200
-Connection ~ 7300 2200
-Wire Wire Line
-	8050 2400 8100 2400
-Connection ~ 8100 2400
-Wire Wire Line
-	7350 2900 7300 2900
-Connection ~ 7300 2900
-Wire Wire Line
-	7350 3600 7300 3600
-Connection ~ 7300 3600
-Wire Wire Line
-	8250 3600 8200 3600
-Connection ~ 8200 3600
-Wire Wire Line
-	8250 2900 8200 2900
-Connection ~ 8200 2900
-Wire Wire Line
-	8250 2200 8200 2200
-Connection ~ 8200 2200
-Wire Wire Line
-	8950 1700 9000 1700
-Connection ~ 9000 1700
-Wire Wire Line
-	8950 2400 9000 2400
-Connection ~ 9000 2400
-Wire Wire Line
-	8950 3100 9000 3100
-Connection ~ 9000 3100
-Wire Wire Line
-	9150 3600 9100 3600
-Connection ~ 9100 3600
-Wire Wire Line
-	9150 2900 9100 2900
-Connection ~ 9100 2900
-Wire Wire Line
-	9150 2200 9100 2200
-Connection ~ 9100 2200
-Wire Wire Line
-	9850 1700 9900 1700
-Connection ~ 9900 1700
-Wire Wire Line
-	9850 2400 9900 2400
-Connection ~ 9900 2400
-Wire Wire Line
-	9850 3100 9900 3100
-Connection ~ 9900 3100
-Wire Wire Line
-	9850 1500 9950 1500
-Wire Wire Line
-	9950 1500 9950 1950
-Wire Wire Line
-	9950 1950 6350 1950
-Wire Wire Line
-	6350 1950 6350 2400
-Wire Wire Line
-	6350 2400 6450 2400
-Wire Wire Line
-	6450 3100 6350 3100
-Wire Wire Line
-	6350 3100 6350 2650
-Wire Wire Line
-	6350 2650 9950 2650
-Wire Wire Line
-	9950 2650 9950 2200
-Wire Wire Line
-	9950 2200 9850 2200
-Wire Wire Line
-	9850 2900 9950 2900
-Wire Wire Line
-	9950 2900 9950 3350
-Wire Wire Line
-	9950 3350 6350 3350
-Wire Wire Line
-	6350 3350 6350 3800
-Wire Wire Line
-	6350 3800 6450 3800
-$Comp
-L GND #PWR017
-U 1 1 594D3964
-P 8200 4100
-F 0 "#PWR017" H 8200 3850 50  0001 C CNN
-F 1 "GND" H 8200 3950 50  0000 C CNN
-F 2 "" H 8200 4100 50  0001 C CNN
-F 3 "" H 8200 4100 50  0001 C CNN
-	1    8200 4100
-	1    0    0    -1  
-$EndComp
-$Comp
-L +5V #PWR018
-U 1 1 594D3BCA
-P 8100 1250
-F 0 "#PWR018" H 8100 1100 50  0001 C CNN
-F 1 "+5V" H 8100 1390 50  0000 C CNN
-F 2 "" H 8100 1250 50  0001 C CNN
-F 3 "" H 8100 1250 50  0001 C CNN
-	1    8100 1250
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	8050 1700 8100 1700
-Connection ~ 8100 1700
-Wire Wire Line
-	8050 3100 8100 3100
-Connection ~ 8100 3100
-$Comp
 L Logo logo1
 U 1 1 594E8880
 P 6550 6950
 F 0 "logo1" H 6550 7050 60  0000 C CNN
 F 1 "Moka" H 6550 6850 60  0000 C CNN
-F 2 "Logos:Moka_20mm" H 6550 6950 60  0001 C CNN
+F 2 "logos:Moka_25mm" H 6550 6950 60  0001 C CNN
 F 3 "" H 6550 6950 60  0001 C CNN
 	1    6550 6950
 	1    0    0    -1  
@@ -1553,9 +1126,462 @@ U 1 1 594E93C5
 P 6550 7300
 F 0 "logo2" H 6550 7400 60  0000 C CNN
 F 1 "le labo" H 6550 7200 60  0000 C CNN
-F 2 "Logos:Logo_labo_20mm" H 6550 7300 60  0001 C CNN
+F 2 "logos:Le_labo_20mm" H 6550 7300 60  0001 C CNN
 F 3 "" H 6550 7300 60  0001 C CNN
 	1    6550 7300
 	1    0    0    -1  
 $EndComp
+$Comp
+L SK6812_MINI D2
+U 1 1 59B9549F
+P 6750 1500
+F 0 "D2" H 6750 1300 60  0000 C CNN
+F 1 "SK6812_MINI" H 6750 1700 60  0000 C CNN
+F 2 "Display_perso:SK6812-mini" H 6800 1300 60  0001 C CNN
+F 3 "" H 6800 1300 60  0001 C CNN
+	1    6750 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L SK6812_MINI D6
+U 1 1 59B958CA
+P 6750 2100
+F 0 "D6" H 6750 1900 60  0000 C CNN
+F 1 "SK6812_MINI" H 6750 2300 60  0000 C CNN
+F 2 "Display_perso:SK6812-mini" H 6800 1900 60  0001 C CNN
+F 3 "" H 6800 1900 60  0001 C CNN
+	1    6750 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L SK6812_MINI D10
+U 1 1 59B9643E
+P 6750 2700
+F 0 "D10" H 6750 2500 60  0000 C CNN
+F 1 "SK6812_MINI" H 6750 2900 60  0000 C CNN
+F 2 "Display_perso:SK6812-mini" H 6800 2500 60  0001 C CNN
+F 3 "" H 6800 2500 60  0001 C CNN
+	1    6750 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L SK6812_MINI D14
+U 1 1 59B96444
+P 6750 3300
+F 0 "D14" H 6750 3100 60  0000 C CNN
+F 1 "SK6812_MINI" H 6750 3500 60  0000 C CNN
+F 2 "Display_perso:SK6812-mini" H 6800 3100 60  0001 C CNN
+F 3 "" H 6800 3100 60  0001 C CNN
+	1    6750 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L SK6812_MINI D3
+U 1 1 59B972A4
+P 7750 1500
+F 0 "D3" H 7750 1300 60  0000 C CNN
+F 1 "SK6812_MINI" H 7750 1700 60  0000 C CNN
+F 2 "Display_perso:SK6812-mini" H 7800 1300 60  0001 C CNN
+F 3 "" H 7800 1300 60  0001 C CNN
+	1    7750 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L SK6812_MINI D7
+U 1 1 59B972AA
+P 7750 2100
+F 0 "D7" H 7750 1900 60  0000 C CNN
+F 1 "SK6812_MINI" H 7750 2300 60  0000 C CNN
+F 2 "Display_perso:SK6812-mini" H 7800 1900 60  0001 C CNN
+F 3 "" H 7800 1900 60  0001 C CNN
+	1    7750 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L SK6812_MINI D11
+U 1 1 59B972B0
+P 7750 2700
+F 0 "D11" H 7750 2500 60  0000 C CNN
+F 1 "SK6812_MINI" H 7750 2900 60  0000 C CNN
+F 2 "Display_perso:SK6812-mini" H 7800 2500 60  0001 C CNN
+F 3 "" H 7800 2500 60  0001 C CNN
+	1    7750 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L SK6812_MINI D15
+U 1 1 59B972B6
+P 7750 3300
+F 0 "D15" H 7750 3100 60  0000 C CNN
+F 1 "SK6812_MINI" H 7750 3500 60  0000 C CNN
+F 2 "Display_perso:SK6812-mini" H 7800 3100 60  0001 C CNN
+F 3 "" H 7800 3100 60  0001 C CNN
+	1    7750 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L SK6812_MINI D4
+U 1 1 59B97C4E
+P 8750 1500
+F 0 "D4" H 8750 1300 60  0000 C CNN
+F 1 "SK6812_MINI" H 8750 1700 60  0000 C CNN
+F 2 "Display_perso:SK6812-mini" H 8800 1300 60  0001 C CNN
+F 3 "" H 8800 1300 60  0001 C CNN
+	1    8750 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L SK6812_MINI D8
+U 1 1 59B97C54
+P 8750 2100
+F 0 "D8" H 8750 1900 60  0000 C CNN
+F 1 "SK6812_MINI" H 8750 2300 60  0000 C CNN
+F 2 "Display_perso:SK6812-mini" H 8800 1900 60  0001 C CNN
+F 3 "" H 8800 1900 60  0001 C CNN
+	1    8750 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L SK6812_MINI D12
+U 1 1 59B97C5A
+P 8750 2700
+F 0 "D12" H 8750 2500 60  0000 C CNN
+F 1 "SK6812_MINI" H 8750 2900 60  0000 C CNN
+F 2 "Display_perso:SK6812-mini" H 8800 2500 60  0001 C CNN
+F 3 "" H 8800 2500 60  0001 C CNN
+	1    8750 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L SK6812_MINI D16
+U 1 1 59B97C60
+P 8750 3300
+F 0 "D16" H 8750 3100 60  0000 C CNN
+F 1 "SK6812_MINI" H 8750 3500 60  0000 C CNN
+F 2 "Display_perso:SK6812-mini" H 8800 3100 60  0001 C CNN
+F 3 "" H 8800 3100 60  0001 C CNN
+	1    8750 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L SK6812_MINI D5
+U 1 1 59B97C66
+P 9750 1500
+F 0 "D5" H 9750 1300 60  0000 C CNN
+F 1 "SK6812_MINI" H 9750 1700 60  0000 C CNN
+F 2 "Display_perso:SK6812-mini" H 9800 1300 60  0001 C CNN
+F 3 "" H 9800 1300 60  0001 C CNN
+	1    9750 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L SK6812_MINI D9
+U 1 1 59B97C6C
+P 9750 2100
+F 0 "D9" H 9750 1900 60  0000 C CNN
+F 1 "SK6812_MINI" H 9750 2300 60  0000 C CNN
+F 2 "Display_perso:SK6812-mini" H 9800 1900 60  0001 C CNN
+F 3 "" H 9800 1900 60  0001 C CNN
+	1    9750 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L SK6812_MINI D13
+U 1 1 59B97C72
+P 9750 2700
+F 0 "D13" H 9750 2500 60  0000 C CNN
+F 1 "SK6812_MINI" H 9750 2900 60  0000 C CNN
+F 2 "Display_perso:SK6812-mini" H 9800 2500 60  0001 C CNN
+F 3 "" H 9800 2500 60  0001 C CNN
+	1    9750 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L SK6812_MINI D17
+U 1 1 59B97C78
+P 9750 3300
+F 0 "D17" H 9750 3100 60  0000 C CNN
+F 1 "SK6812_MINI" H 9750 3500 60  0000 C CNN
+F 2 "Display_perso:SK6812-mini" H 9800 3100 60  0001 C CNN
+F 3 "" H 9800 3100 60  0001 C CNN
+	1    9750 3300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7100 1400 7150 1400
+Wire Wire Line
+	7150 1400 7150 3900
+Wire Wire Line
+	7150 3900 10150 3900
+Wire Wire Line
+	8150 1400 8150 3900
+Wire Wire Line
+	8150 1400 8100 1400
+Wire Wire Line
+	9100 1400 9150 1400
+Wire Wire Line
+	9150 1400 9150 3900
+Wire Wire Line
+	10150 3900 10150 1400
+Wire Wire Line
+	10150 1400 10100 1400
+Wire Wire Line
+	7100 2000 7150 2000
+Connection ~ 7150 2000
+Wire Wire Line
+	8100 2000 8150 2000
+Connection ~ 8150 2000
+Wire Wire Line
+	7100 2600 7150 2600
+Connection ~ 7150 2600
+Wire Wire Line
+	7100 3200 7150 3200
+Connection ~ 7150 3200
+Wire Wire Line
+	8100 3200 8150 3200
+Connection ~ 8150 3200
+Wire Wire Line
+	8100 2600 8150 2600
+Connection ~ 8150 2600
+Wire Wire Line
+	9100 2000 9150 2000
+Connection ~ 9150 2000
+Wire Wire Line
+	10100 2000 10150 2000
+Connection ~ 10150 2000
+Wire Wire Line
+	10150 2600 10100 2600
+Connection ~ 10150 2600
+Wire Wire Line
+	9150 2600 9100 2600
+Connection ~ 9150 2600
+Wire Wire Line
+	9100 3200 9150 3200
+Connection ~ 9150 3200
+Wire Wire Line
+	10100 3200 10150 3200
+Connection ~ 10150 3200
+Connection ~ 8150 3900
+Connection ~ 9150 3900
+Wire Wire Line
+	6350 3400 6400 3400
+Wire Wire Line
+	6350 1000 6350 3400
+Wire Wire Line
+	6350 1000 9350 1000
+Wire Wire Line
+	7350 1000 7350 3400
+Wire Wire Line
+	7350 3400 7400 3400
+Wire Wire Line
+	8350 3400 8400 3400
+Wire Wire Line
+	8350 1000 8350 3400
+Wire Wire Line
+	9350 1000 9350 3400
+Wire Wire Line
+	9350 3400 9400 3400
+Wire Wire Line
+	9400 2800 9350 2800
+Connection ~ 9350 2800
+Wire Wire Line
+	8400 2800 8350 2800
+Connection ~ 8350 2800
+Wire Wire Line
+	9400 1600 9350 1600
+Connection ~ 9350 1600
+Wire Wire Line
+	8400 1600 8350 1600
+Connection ~ 8350 1600
+Wire Wire Line
+	8350 2200 8400 2200
+Connection ~ 8350 2200
+Wire Wire Line
+	9350 2200 9400 2200
+Connection ~ 9350 2200
+Wire Wire Line
+	7400 1600 7350 1600
+Connection ~ 7350 1600
+Connection ~ 8350 1000
+Connection ~ 7350 1000
+Wire Wire Line
+	7350 2200 7400 2200
+Connection ~ 7350 2200
+Wire Wire Line
+	7350 2800 7400 2800
+Connection ~ 7350 2800
+Wire Wire Line
+	6400 2800 6350 2800
+Connection ~ 6350 2800
+Wire Wire Line
+	6350 2200 6400 2200
+Connection ~ 6350 2200
+Wire Wire Line
+	6400 1600 6350 1600
+Connection ~ 6350 1600
+Wire Wire Line
+	7100 1600 7250 1600
+Wire Wire Line
+	7250 1600 7250 1400
+Wire Wire Line
+	7250 1400 7400 1400
+Wire Wire Line
+	8100 1600 8250 1600
+Wire Wire Line
+	8250 1600 8250 1400
+Wire Wire Line
+	8250 1400 8400 1400
+Wire Wire Line
+	9100 1600 9250 1600
+Wire Wire Line
+	9250 1600 9250 1400
+Wire Wire Line
+	9250 1400 9400 1400
+Wire Wire Line
+	7100 2200 7250 2200
+Wire Wire Line
+	7250 2200 7250 2000
+Wire Wire Line
+	7250 2000 7400 2000
+Wire Wire Line
+	8100 2200 8250 2200
+Wire Wire Line
+	8250 2200 8250 2000
+Wire Wire Line
+	8250 2000 8400 2000
+Wire Wire Line
+	9100 2200 9250 2200
+Wire Wire Line
+	9250 2200 9250 2000
+Wire Wire Line
+	9250 2000 9400 2000
+Wire Wire Line
+	7100 2800 7250 2800
+Wire Wire Line
+	7250 2800 7250 2600
+Wire Wire Line
+	7250 2600 7400 2600
+Wire Wire Line
+	8100 2800 8250 2800
+Wire Wire Line
+	8250 2800 8250 2600
+Wire Wire Line
+	8250 2600 8400 2600
+Wire Wire Line
+	8100 3400 8250 3400
+Wire Wire Line
+	8250 3400 8250 3200
+Wire Wire Line
+	8250 3200 8400 3200
+Wire Wire Line
+	7100 3400 7250 3400
+Wire Wire Line
+	7250 3400 7250 3200
+Wire Wire Line
+	7250 3200 7400 3200
+Wire Wire Line
+	9100 2800 9250 2800
+Wire Wire Line
+	9250 2800 9250 2600
+Wire Wire Line
+	9250 2600 9400 2600
+Wire Wire Line
+	9100 3400 9250 3400
+Wire Wire Line
+	9250 3400 9250 3200
+Wire Wire Line
+	9250 3200 9400 3200
+$Comp
+L GND #PWR017
+U 1 1 59B9BAB2
+P 8250 4000
+F 0 "#PWR017" H 8250 3750 50  0001 C CNN
+F 1 "GND" H 8250 3850 50  0000 C CNN
+F 2 "" H 8250 4000 50  0001 C CNN
+F 3 "" H 8250 4000 50  0001 C CNN
+	1    8250 4000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8250 4000 8250 3900
+Connection ~ 8250 3900
+$Comp
+L +5V #PWR018
+U 1 1 59B9BDF0
+P 8250 900
+F 0 "#PWR018" H 8250 750 50  0001 C CNN
+F 1 "+5V" H 8250 1040 50  0000 C CNN
+F 2 "" H 8250 900 50  0001 C CNN
+F 3 "" H 8250 900 50  0001 C CNN
+	1    8250 900 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8250 900  8250 1000
+Connection ~ 8250 1000
+Wire Wire Line
+	10100 1600 10250 1600
+Wire Wire Line
+	10250 1600 10250 1800
+Wire Wire Line
+	10250 1800 6250 1800
+Wire Wire Line
+	6250 1800 6250 2000
+Wire Wire Line
+	6250 2000 6400 2000
+Wire Wire Line
+	6400 2600 6250 2600
+Wire Wire Line
+	6250 2600 6250 2400
+Wire Wire Line
+	6250 2400 10250 2400
+Wire Wire Line
+	10250 2400 10250 2200
+Wire Wire Line
+	10250 2200 10100 2200
+Wire Wire Line
+	10100 2800 10250 2800
+Wire Wire Line
+	10250 2800 10250 3000
+Wire Wire Line
+	10250 3000 6250 3000
+Wire Wire Line
+	6250 3000 6250 3200
+Wire Wire Line
+	6250 3200 6400 3200
+NoConn ~ 10100 3400
+Text GLabel 6250 1400 0    60   Input ~ 0
+DIN
+Wire Wire Line
+	6250 1400 6400 1400
+$Comp
+L Conn_02x03_Odd_Even J1
+U 1 1 59B9F584
+P 3150 4600
+F 0 "J1" H 3200 4800 50  0000 C CNN
+F 1 "Conn_02x03_Odd_Even" H 3200 4400 50  0000 C CNN
+F 2 "Connectors_perso:Pin_Header_Straight_2x03_Pitch2.54mm_SMD" H 3150 4600 50  0001 C CNN
+F 3 "" H 3150 4600 50  0001 C CNN
+	1    3150 4600
+	1    0    0    -1  
+$EndComp
+$Comp
+L D D1
+U 1 1 59BD4224
+P 4550 1400
+F 0 "D1" H 4550 1500 50  0000 C CNN
+F 1 "D" H 4550 1300 50  0000 C CNN
+F 2 "Diodes_SMD:D_0603" H 4550 1400 50  0001 C CNN
+F 3 "" H 4550 1400 50  0001 C CNN
+	1    4550 1400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4700 1400 4900 1400
+Wire Wire Line
+	4400 1400 4300 1400
+Wire Wire Line
+	4300 1400 4300 1550
+Wire Wire Line
+	4300 1550 3300 1550
 $EndSCHEMATC
