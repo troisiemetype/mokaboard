@@ -1,6 +1,5 @@
 EESchema Schematic File Version 2
 LIBS:Moka-rescue
-LIBS:Tuile-rescue
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -1571,7 +1570,7 @@ U 1 1 59BD4224
 P 4550 1400
 F 0 "D1" H 4550 1500 50  0000 C CNN
 F 1 "D" H 4550 1300 50  0000 C CNN
-F 2 "Diodes_SMD:D_0603" H 4550 1400 50  0001 C CNN
+F 2 "Diodes_SMD:D_SOD-123" H 4550 1400 50  0001 C CNN
 F 3 "" H 4550 1400 50  0001 C CNN
 	1    4550 1400
 	1    0    0    -1  
